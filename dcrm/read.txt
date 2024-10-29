@@ -1,0 +1,2 @@
+In order to create webpage we need to
+create view, create urls in website and in dcrm

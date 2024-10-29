@@ -1,0 +1,26 @@
+{% extends 'base.html'%}
+{% block content%}
+
+<div class="col-md-6 offset-md-3">
+<h1> Add Record </h1>
+
+<form method="POST" action = "{% url 'add_record' %}">
+    {% csrf_token %}
+
+    {{ form.first_name }} <br/>
+    {{ form.last_name }} <br/>
+    {{ form.email }} <br/>
+    {{ form.phone }} <br/>
+    {{ form.address }} <br/> 
+    {{ form.city }} <br/>
+    {{ form.state }} <br/>
+    {{ form.zipcode }} <br/>
+    <button type="submit" class="btn btn-info">Add Record</button>
+    <a href="{% url 'home' %}" class="btn btn-dark">Back</a>
+   
+</form>
+
+
+</div>
+
+{% endblock %}
